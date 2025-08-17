@@ -1,13 +1,9 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Command from '../components/Command.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import ResourcePost from '../layouts/ResourcePost.astro';
 import Sidenav from '../components/Sidenav.astro'
 import { getCollection, render } from 'astro:content';
-
-const resources = await getCollection('resources');
-const { Content } = await render(resources[0]);
+import '../styles/global.css'
 ---
 
 <!doctype html>
@@ -17,9 +13,9 @@ const { Content } = await render(resources[0]);
 	</head>
 	<body>
 		<main>
-    <Sidenav />
+      <Sidenav />
       <article>
-        <Command />
+        <slot />
       </article>
 		</main>
 	</body>

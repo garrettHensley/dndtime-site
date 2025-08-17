@@ -1,0 +1,47 @@
+---
+const { title } = Astro.props;
+---
+
+<article>
+  <span>
+    { title ? 
+    <span><span class='user-tag'>maintenance</span><span class='operator'>@</span><span class='location-tag'>backrooms-pc</span><span class='operator'>|></span> cat {title}.md</span>
+    : 
+    <span><span class='user-tag'>maintenance</span><span class='operator'>@</span><span class='location-tag'>backrooms-pc</span><span class='operator blink'>|></span> <input type=text /></span>
+    }
+  </span>
+</article>
+
+<style>
+  .user-tag {
+    color: grey;
+  }
+  .operator {
+    color: #1ff116;
+  }
+  .location-tag {
+    color: #c693ff;
+  }
+  .operator.live {
+
+  }
+  input {
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
+
+  .blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+  </style>

@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+
+const resources = await getCollection('resources');
+---
+<nav>
+  <ul>
+    <li>/resources
+      <ul>
+        { resources.map((resource) => <li><a href=`/resources/${resource.data.title}`>{ resource.data.title }</a></li>) }
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    width: 20%;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+</style>
