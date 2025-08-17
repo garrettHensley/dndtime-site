@@ -1,34 +1,34 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import Sidenav from '../components/Sidenav.astro'
-import { getCollection, render } from 'astro:content';
-import '../styles/global.css'
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Sidenav from "../components/Sidenav.astro";
+import { getCollection, render } from "astro:content";
+import "../styles/global.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<main>
-      <Sidenav />
-      <article>
-        <slot />
-      </article>
-		</main>
-	</body>
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <main>
+            <Sidenav />
+            <article>
+                <slot />
+            </article>
+        </main>
+    </body>
 </html>
 
 <style>
-  main {
-    height: 60vh;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    display: flex;
-    justify-content: center;
-  }
-  article {
-  }
+    main {
+        min-height: 60vh;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        display: flex;
+        justify-content: center;
+    }
+    article {
+    }
 </style>
