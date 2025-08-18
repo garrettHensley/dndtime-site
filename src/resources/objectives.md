@@ -16,7 +16,7 @@ author: "Agent R"
 
 1. Locate the registered object
 2. Rendevous with the rogue asset
-3. Increase bandwidth
+3. Increase [REDACTED]
 
 ### Known Contacts
 
