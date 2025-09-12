@@ -2,12 +2,18 @@
 import { getCollection, render } from 'astro:content';
 
 const resources = await getCollection('resources');
+const archives = await getCollection('archives');
 ---
 <nav>
   <ul>
     <li>/resources
       <ul>
         { resources.map((resource) => <li><a href=`/resources/${resource.data.title}`>{ resource.data.title }</a></li>) }
+      </ul>
+    </li>
+    <li>/archives
+      <ul>
+        { archives.map((archive) => <li><a href=`/archives/${archive.data.title}`>{ archive.data.title }</a></li>) }
       </ul>
     </li>
   </ul>

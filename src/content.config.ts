@@ -9,4 +9,12 @@ const resources = defineCollection({
     }),
 })
 
-export const collections = { resources };
+const archives = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/archives"}),
+    schema: z.object({
+        title: z.string(),
+        author: z.string()
+    })
+})
+
+export const collections = { resources, archives };

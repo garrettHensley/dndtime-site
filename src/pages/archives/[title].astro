@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from "astro:content";
+import MainLayout from '../../layouts/MainLayout.astro'
+import Command from '../../components/Command.astro'
+
+export async function getStaticPaths() {
+  const archives = await getCollection('archives')
+
+  return archives.map(archive => ({
+    params: { title: archive.data.title },
+    props: { archive } 
+  }))
+}
+
+const { archive } = Astro.props;
+const { Content } = await render(archive)
+---
+
+<MainLayout>
+  <Command title={archive.data.title} />
+  <Content />
+  <Command />
+</MainLayout>
