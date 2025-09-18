@@ -16,6 +16,9 @@ const archives = await getCollection('archives');
         { archives.map((archive) => <li><a href=`/archives/${archive.data.title}`>{ archive.data.title }</a></li>) }
       </ul>
     </li>
+    <li>
+        /journals
+    </li>
   </ul>
 </nav>
 

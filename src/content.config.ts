@@ -17,4 +17,12 @@ const archives = defineCollection({
     })
 })
 
+const journals = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/journals"}),
+    schema: z.object({
+        title: z.string(),
+        author: z.string()
+    })
+})
+
 export const collections = { resources, archives };
