@@ -1,6 +1,9 @@
 ---
 title: "objectives"
-author: "[UNKNOWN]"
+author: "R"
 ---
 
-- Find [REDACTED]
+- [ ] Find DG.
+- [ ] Find the Object; Register the Object.
+- [ ] Investigate Floor 12.
+- [x] Check in with Records.
